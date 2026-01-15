@@ -1,0 +1,148 @@
+{
+    "public_method": {
+        "prefix": "pubf",
+        "description": "Create a public method",
+        "body": [
+            "public function ${1}(${2}): ${3:void}",
+            "{",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "private_method": {
+        "prefix": "prif",
+        "description": "Create a private method",
+        "body": [
+            "private function ${1}(${2}): ${3:void}",
+            "{",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "protected_method": {
+        "prefix": "prof",
+        "description": "Create a protected method",
+        "body": [
+            "protected function ${1}(${2}): ${3:void}",
+            "{",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "construct": {
+        "prefix": "conf",
+        "description": "Create a construct",
+        "body": [
+            "public function __construct(${1})",
+            "{",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "if": {
+        "prefix": "if",
+        "description": "Create an if statement",
+        "body": [
+            "if (${1}) {",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "switch": {
+        "prefix": "switch",
+        "description": "Create a switch case",
+        "body": [
+            "switch (${1}) {",
+            "   case '${2}':",
+            "       ${3}",
+            "       break;",
+            "   case '${4}':",
+            "       ${5}",
+            "       break;",
+            "   default:",
+            "       ${0}",
+            "}"
+        ]
+    },
+    "for": {
+        "prefix": "for",
+        "description": "Create a for loop",
+        "body": [
+            "for ($i = ${1:0}; $i < ${2}; $i++) {",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "foreach": {
+        "prefix": "fore",
+        "description": "Create a foreach loop",
+        "body": [
+            "foreach ($${1:$array} as $${2:$value}) {",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "foreachKey": {
+        "prefix": "fork",
+        "description": "Create a foreach loop",
+        "body": [
+            "foreach ($${1:array} as $${2:key} => $${3:value}) {",
+            "   ${0}",
+            "}"
+        ]
+    },
+    "array": {
+        "prefix": "arr",
+        "description": "Create an array",
+        "body": [
+            "[",
+            "   '${1}',",
+            "   '${2}',",
+            "   '${3}',",
+            "   '${4}',",
+            "   '${0}',",
+            "];"
+        ]
+    },
+    "lara-rules": {
+        "prefix": "rul",
+        "description": "Create Laravel rules",
+        "body": [
+            "return [",
+            "   '${1}' => ['${2}'],",
+            "   '${3}' => ['${4}'],",
+            "   '${5}' => ['${6}'],",
+            "   '${7}' => ['${8}'],",
+            "   '${9}' => ['${0}'],",
+            "];"
+        ]
+    },
+    "lara-route-get": {
+        "prefix": "rog",
+        "description": "Create a route with get method",
+        "body": [
+            "Route::get('${1}', [${2}::class, '${3}'])->name('${0}');"
+        ]
+    },
+    "lara-route-post": {
+        "prefix": "rop",
+        "description": "Create a route with post method",
+        "body": [
+            "Route::post('${1}', [${2}::class, '${3}'])->name('${0}');"
+        ]
+    },
+    "lara-route-delete": {
+        "prefix": "rod",
+        "description": "Create a route with delete method",
+        "body": [
+            "Route::delete('${1}', [${2}::class, '${3}'])->name('${0}');"
+        ]
+    },
+    "lara-route-resource": {
+        "prefix": "ror",
+        "description": "Create a route with resource method",
+        "body": [
+            "Route::resource('${1}', ${2}::class)->name('${0}');"
+        ]
+    }
+}

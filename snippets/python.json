@@ -1,0 +1,37 @@
+{
+    "function": {
+        "prefix": "def",
+        "description": "Create a method",
+        "body": [
+            "def ${1}(${2}):",
+            "   ${0}"
+        ]
+    },
+    "switch": {
+        "prefix": "match",
+        "description": "Create a match case",
+        "body": [
+            "match ${1}:",
+            "   case '${2}':",
+            "       ${3}",
+            "   case '${4}':",
+            "       ${0}"
+        ]
+    },
+    "if": {
+        "prefix": "if",
+        "description": "Create an if statement",
+        "body": [
+            "if (${1}):",
+            "   ${0}"
+        ]
+    },
+    "for": {
+        "prefix": "for",
+        "description": "Create a for loop",
+        "body": [
+            "for ${1} in ${2}:",
+            "   ${0}"
+        ]
+    }
+}
